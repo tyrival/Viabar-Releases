@@ -1,13 +1,8 @@
 import { useI18n } from '../../i18n/I18nContext'
 
-const items = [
-  { project: 'Project Alpha', task: '信息架构设计', reminder: '14:00', color: '#0085ff' },
-  { project: 'Dev Sandbox', task: 'CI/CD 部署配置', reminder: 'Tomorrow', color: '#ff9f0a' },
-  { project: 'Beta Launch', task: '市场调研分析', reminder: '06-05', color: '#bf5af2' },
-]
-
 export default function MenuBarMockup() {
   const { t } = useI18n()
+  const items = t.mockup.menuBarProjects
 
   return (
     <div className="space-y-3">

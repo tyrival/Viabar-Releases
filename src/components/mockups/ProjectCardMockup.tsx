@@ -2,20 +2,10 @@ import { useI18n } from '../../i18n/I18nContext'
 
 interface Props { showTemplate?: boolean }
 
-const projects = [
-  { name: 'Project Alpha', color: '#0085ff', progress: 60, milestones: 4, topMilestone: '信息架构设计', subtask: '用户流程梳理', reminder: { date: '06-02', time: '14:00', overdue: false } },
-  { name: 'Dev Sandbox', color: '#ff9f0a', progress: 80, milestones: 5, topMilestone: 'CI/CD 部署配置', subtask: null, reminder: { date: '05-28', time: '10:00', overdue: true } },
-  { name: 'Beta Launch', color: '#bf5af2', progress: 35, milestones: 4, topMilestone: '市场调研分析', subtask: null, reminder: { date: '06-05', time: '10:00', overdue: false } },
-]
-
-const templates = [
-  { name: '客户项目', color: '#30d158', milestones: 5, subtasks: 12 },
-  { name: '课程设计', color: '#5e5ce6', milestones: 3, subtasks: 8 },
-  { name: '个人规划', color: '#ff375f', milestones: 4, subtasks: 6 },
-]
-
 export default function ProjectCardMockup({ showTemplate }: Props) {
   const { t } = useI18n()
+  const projects = t.mockup.notifyProjects
+  const templates = t.mockup.templateData
 
   if (showTemplate) {
     return (
@@ -37,7 +27,7 @@ export default function ProjectCardMockup({ showTemplate }: Props) {
 
   return (
     <div className="space-y-2.5">
-      <div className="text-xs font-semibold text-[#6e6e73] dark:text-[#8e8e9a] uppercase tracking-wide mb-3">Project Overview</div>
+      <div className="text-xs font-semibold text-[#6e6e73] dark:text-[#8e8e9a] uppercase tracking-wide mb-3">{t.mockup.overview}</div>
       {projects.map(p => (
         <div key={p.name}
           className="flex items-stretch rounded-xl overflow-hidden border border-[#e5e5ea] dark:border-[#1e2230]
@@ -70,11 +60,7 @@ export default function ProjectCardMockup({ showTemplate }: Props) {
                   <circle cx="14" cy="14" r="11" fill="none" stroke="#00BBE1" strokeOpacity="0.15" strokeWidth="6" />
                   <circle cx="14" cy="14" r="11" fill="none" stroke="url(#pg2)" strokeWidth="6"
                     strokeDasharray={`${p.progress * 0.69} 69`} strokeLinecap="round" transform="rotate(-90 14 14)" />
-                  <defs>
-                    <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#00BBE1" /><stop offset="100%" stopColor="#00F9D0" />
-                    </linearGradient>
-                  </defs>
+                  <defs><linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#00BBE1" /><stop offset="100%" stopColor="#00F9D0" /></linearGradient></defs>
                 </svg>
                 <span className="text-sm font-bold text-[#00BBE1] tabular-nums w-9 text-right">{p.progress}%</span>
               </div>
