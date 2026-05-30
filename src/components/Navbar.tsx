@@ -28,10 +28,10 @@ export default function Navbar() {
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
           <a href="https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar-1.0.5.dmg"
-            className="flex items-center gap-1.5 px-4 py-1.5 text-sm font-semibold text-white bg-[#0085ff] hover:bg-[#0070e0] rounded-lg transition-colors no-underline ml-1"
+            className="flex items-center justify-center gap-1.5 px-4 py-1.5 text-sm font-semibold text-white bg-[#0085ff] hover:bg-[#0070e0] rounded-lg transition-colors no-underline ml-1 w-[120px]"
           >
             <Download size={14} />
-            {t.nav.download}
+            <span>{t.nav.download}</span>
           </a>
         </div>
       </div>

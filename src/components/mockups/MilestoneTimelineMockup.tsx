@@ -6,7 +6,7 @@ interface Mil { id: string; title: string; done: boolean; sub?: Sub[] }
 
 const initMils: Mil[] = [
   { id: '1', title: '需求分析与调研', done: true },
-  { id: '2', title: '信息架构设计', done: true, sub: [{ id: '2a', title: '用户流程图', done: true }, { id: '2b', title: '页面结构梳理', done: false }] },
+  { id: '2', title: '信息架构设计', done: false, sub: [{ id: '2a', title: '用户流程图', done: false }, { id: '2b', title: '页面结构梳理', done: false }] },
   { id: '3', title: '交互原型制作', done: false },
   { id: '4', title: '视觉设计与规范', done: false },
 ]
@@ -19,10 +19,24 @@ export default function MilestoneTimelineMockup() {
   const [nextId, setNextId] = useState(5)
 
   const toggle = (id: string) => {
-    setItems(prev => prev.map(m =>
-      m.id === id ? { ...m, done: !m.done } :
-      { ...m, sub: m.sub?.map(s => s.id === id ? { ...s, done: !s.done } : s) }
-    ))
+    setItems(prev => prev.map(m => {
+      // Toggle parent milestone → also toggle all children
+      if (m.id === id) {
+        const newDone = !m.done
+        return {
+          ...m,
+          done: newDone,
+          sub: m.sub?.map(s => ({ ...s, done: newDone })),
+        }
+      }
+      // Toggle child subtask → auto-sync parent
+      if (m.sub?.some(s => s.id === id)) {
+        const newSub = m.sub.map(s => s.id === id ? { ...s, done: !s.done } : s)
+        const allDone = newSub.every(s => s.done)
+        return { ...m, sub: newSub, done: allDone }
+      }
+      return m
+    }))
   }
 
   const send = () => {
@@ -32,12 +46,17 @@ export default function MilestoneTimelineMockup() {
     setNextId(n => n + 1)
   }
 
+  // Filter: hide completed parent ONLY if it has no incomplete children
   const visibleItems = hideCompleted
-    ? items.filter(m => !m.done || (m.sub && m.sub.some(s => !s.done)))
+    ? items.filter(m => {
+        if (!m.done) return true
+        if (m.sub && m.sub.some(s => !s.done)) return true
+        return false
+      })
     : items
 
   return (
-    <div className="space-y-0.5" style={{ maxHeight: 420 }}>
+    <div className="flex flex-col" style={{ maxHeight: 460 }}>
       <div className="flex items-center justify-between mb-3 px-1">
         <span className="text-xs font-semibold text-[#6e6e73] dark:text-[#8e8e9a] uppercase tracking-wide">{t.mockup.milestones}</span>
         <label className="flex items-center gap-1.5 text-[11px] text-[#aeaeb2] dark:text-[#5a5a6e] cursor-pointer select-none">
@@ -45,7 +64,7 @@ export default function MilestoneTimelineMockup() {
           {t.mockup.hideCompleted}
         </label>
       </div>
-      <div className="space-y-0.5 overflow-y-auto pr-1" style={{ maxHeight: 300 }}>
+      <div className="flex-1 space-y-0 overflow-y-auto pr-1" style={{ maxHeight: 320 }}>
         {visibleItems.length === 0 ? (
           <div className="text-center py-8 text-xs text-[#aeaeb2] dark:text-[#5a5a6e]">{t.mockup.noMilestones}</div>
         ) : (
@@ -63,10 +82,10 @@ export default function MilestoneTimelineMockup() {
                 </svg>
                 <span className={`text-sm ${m.done ? 'line-through text-[#aeaeb2] dark:text-[#5a5a6e]' : 'text-[#1d1d1f] dark:text-[#e8e8ed] font-medium'}`}>{m.title}</span>
               </div>
-              {(!hideCompleted || !m.done) && m.sub?.map(s => (
+              {m.sub?.map(s => (
                 <div key={s.id} onClick={() => toggle(s.id)}
                   className="flex items-center gap-2.5 px-2 py-1 ml-8 rounded-lg hover:bg-[#f5f5f7] dark:hover:bg-[#1a1d28] cursor-pointer transition-colors"
-                  style={s.done && !hideCompleted ? { opacity: 0.5 } : {}}
+                  style={(!hideCompleted && s.done) ? { opacity: 0.5 } : {}}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                     {s.done
@@ -81,7 +100,6 @@ export default function MilestoneTimelineMockup() {
           ))
         )}
       </div>
-      {/* Input */}
       <div className="mt-3 pt-3 border-t border-[#e5e5ea] dark:border-[#1e2230] flex items-center gap-2">
         <input value={text} onChange={e => setText(e.target.value)}
           onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); send() } }}
