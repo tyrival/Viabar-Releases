@@ -11,8 +11,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#f8f9fb]/80 dark:bg-[#0a0d14]/75 backdrop-blur-xl border-b border-[#e5e5ea] dark:border-[#1e2230]">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 no-underline">
-          <img src={theme === 'dark' ? logoDark : logoLight} alt="Viabar" className="h-7 w-auto" />
+        <a href="#" className="flex items-center gap-2.5 no-underline group">
+          <img src={theme === 'dark' ? logoDark : logoLight} alt="Viabar" className="h-7 w-auto rounded-lg" />
+          <span className="text-lg font-bold text-[#1d1d1f] dark:text-[#e8e8ed] tracking-tight group-hover:text-[#0085ff] dark:group-hover:text-[#00bfff] transition-colors">Viabar</span>
         </a>
 
         <div className="flex items-center gap-1.5">

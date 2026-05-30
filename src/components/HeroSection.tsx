@@ -16,11 +16,7 @@ export default function HeroSection() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-5">
-          <span className="bg-gradient-to-r from-[#0085ff] via-[#00a8ff] to-[#00bfff] bg-clip-text text-transparent">
-            {t.hero.title1}
-          </span>
-          <span className="text-[#1d1d1f] dark:text-[#e8e8ed]">，</span>
-          <span className="text-[#1d1d1f] dark:text-[#e8e8ed]">{t.hero.title2}</span>
+          <span className="bg-gradient-to-r from-[#0085ff] via-[#00a8ff] to-[#00bfff] bg-clip-text text-transparent">{t.hero.title1}{t.hero.title2}</span>
         </h1>
 
         <p className="text-lg md:text-xl text-[#6e6e73] dark:text-[#8e8e9a] max-w-lg mx-auto mt-5 leading-relaxed">
