@@ -1,44 +1,57 @@
+import { type ReactNode } from 'react'
 import { type LucideIcon } from 'lucide-react'
+import { useI18n } from '../i18n/I18nContext'
+
+type FeatureKey = 'milestone' | 'kanban' | 'ecosystem' | 'notify' | 'template' | 'report'
 
 interface Props {
-  id: string
+  id: FeatureKey
   icon: LucideIcon
-  title: string
-  subtitle: string
-  description: string
-  features: string[]
+  mockup: ReactNode
   reverse: boolean
 }
 
-export default function FeatureSection({ id, icon: Icon, title, subtitle, description, features, reverse }: Props) {
+export default function FeatureSection({ id, icon: Icon, mockup, reverse }: Props) {
+  const { t } = useI18n()
+  const feat = t.features[id]
+
   return (
     <section id={id} className="py-24 relative">
       <div className="max-w-6xl mx-auto px-6">
-        <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16`}>
-          {/* Visual Card */}
-          <div className="flex-1 w-full max-w-md">
-            <div className="relative rounded-2xl bg-[#13131a] border border-[#252530] p-8 aspect-square flex items-center justify-center overflow-hidden">
-              {/* Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0085ff]/5 to-transparent" />
-              {/* Icon area */}
-              <div className="relative z-10 text-center">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0085ff]/10 to-[#00bfff]/10 border border-[#252530] flex items-center justify-center mx-auto mb-5">
-                  <Icon size={36} className="text-[#0085ff]" strokeWidth={1.5} />
-                </div>
-                <div className="text-lg font-bold text-[#e8e8ed] mb-2">{title}</div>
-                <div className="text-sm text-[#9494a0]">{subtitle}</div>
-              </div>
+        <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}>
+          {/* Mockup */}
+          <div className="flex-1 w-full max-w-lg lg:max-w-none">
+            <div className="relative rounded-2xl border border-[#e5e5ea] dark:border-[#1e2230]
+              bg-white dark:bg-[#13161f] overflow-hidden
+              shadow-[0_8px_40px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)]
+              p-4 sm:p-6">
+              {/* Decorative top bar */}
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0085ff]/40 dark:via-[#00bfff]/40 to-transparent" />
+              {mockup}
             </div>
           </div>
 
           {/* Text */}
           <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#e8e8ed] mb-4">{title}</h2>
-            <p className="text-lg text-[#9494a0] leading-relaxed mb-6">{description}</p>
+            <div className="accent-line mb-6" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#0085ff]/10 dark:bg-[#00bfff]/10 flex items-center justify-center">
+                <Icon size={20} className="text-[#0085ff] dark:text-[#00bfff]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-[#1d1d1f] dark:text-[#e8e8ed]">
+                {feat.title}
+              </h3>
+            </div>
+            <p className="text-base text-[#6e6e73] dark:text-[#8e8e9a] mb-2 font-medium">{feat.subtitle}</p>
+            <p className="text-sm text-[#8e8e93] dark:text-[#6a6a7a] leading-relaxed mb-6">{feat.desc}</p>
             <div className="flex flex-wrap gap-2">
-              {features.map((f, i) => (
-                <span key={i} className="px-3 py-1.5 text-xs font-medium text-[#0085ff] bg-[#0085ff]/8 border border-[#0085ff]/15 rounded-full">
-                  {f}
+              {feat.tags.map((tag, i) => (
+                <span key={i} className="px-3 py-1.5 text-xs font-medium
+                  text-[#0085ff] dark:text-[#00bfff]
+                  bg-[#0085ff]/6 dark:bg-[#00bfff]/8
+                  border border-[#0085ff]/15 dark:border-[#00bfff]/15
+                  rounded-full">
+                  {tag}
                 </span>
               ))}
             </div>
