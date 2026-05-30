@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useI18n } from '../../i18n/I18nContext'
+
+function buildMemos(data: { content: string; time: string }[]) {
+  return data.map((m, i) => ({ id: String(i + 1), ...m }))
+}
 
 export default function MemoTimelineMockup() {
   const { t } = useI18n()
-  const initMemos = t.mockup.memoData.map((m, i) => ({ id: String(i + 1), ...m }))
   const [text, setText] = useState('')
-  const [items, setItems] = useState(initMemos)
+  const [items, setItems] = useState(() => buildMemos(t.mockup.memoData))
   const [copied, setCopied] = useState<string | null>(null)
+
+  useEffect(() => {
+    setItems(buildMemos(t.mockup.memoData))
+  }, [t.mockup.memoData])
 
   const send = () => {
     if (!text.trim()) return

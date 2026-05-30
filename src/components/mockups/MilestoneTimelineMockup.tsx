@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useI18n } from '../../i18n/I18nContext'
 
 interface Sub { id: string; title: string; done: boolean }
@@ -19,13 +19,10 @@ export default function MilestoneTimelineMockup() {
   const [hideCompleted, setHideCompleted] = useState(false)
   const [text, setText] = useState('')
   const [nextId, setNextId] = useState(5)
-  const [lang, setLang] = useState(t.mockup.milestoneData[0])
 
-  // Rebuild data when language changes
-  if (t.mockup.milestoneData[0] !== lang) {
-    setLang(t.mockup.milestoneData[0])
+  useEffect(() => {
     setItems(buildMils(t.mockup.milestoneData))
-  }
+  }, [t.mockup.milestoneData])
 
   const toggle = (id: string) => {
     setItems(prev => prev.map(m => {
