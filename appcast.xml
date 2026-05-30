@@ -5,6 +5,17 @@
     <description>Most recent updates to Viabar</description>
     <language>en</language>
     <item>
+      <title>Version 1.0.4</title>
+      <sparkle:version>5</sparkle:version>
+      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.5</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.0.4/Viabar-1.0.4.dmg"
+                 sparkle:version="5"
+                 sparkle:shortVersionString="1.0.4"
+                 length="4919423"
+                 type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Version 1.0.3</title>
       <sparkle:version>4</sparkle:version>
       <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
