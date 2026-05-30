@@ -2,8 +2,8 @@ const en = {
   nav: { features: 'Features', download: 'Download' },
   hero: {
     badge: 'Less is more.',
-    title1: '经由节点',
-    title2: '，总览全局',
+    title1: 'Via Nodes',
+    title2: ', View Bars',
     subtitle: 'A lightweight productivity tool focused on multi-project progress overview and milestone management.',
     download: 'Free Download',
     learn: 'Learn More',
