@@ -4,7 +4,7 @@
 
 [Website](https://viabar.tyrival.com) · [Download](https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar.dmg)
 
-###### Explanation
+#### Explanation
 
 English ｜ [中文](README_zh.md)
 
