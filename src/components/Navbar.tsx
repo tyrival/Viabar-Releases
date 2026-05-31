@@ -27,7 +27,7 @@ export default function Navbar() {
           >
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
-          <a href="https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar-1.0.5.dmg"
+          <a href="https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar.dmg"
             className="flex items-center justify-center gap-1.5 px-4 py-1.5 text-sm font-semibold text-white bg-[#0085ff] hover:bg-[#0070e0] rounded-lg transition-colors no-underline ml-1 w-[120px]"
           >
             <Download size={14} />

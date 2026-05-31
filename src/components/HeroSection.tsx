@@ -24,7 +24,7 @@ export default function HeroSection() {
         </p>
 
         <div className="flex items-center justify-center gap-4 mt-9 flex-wrap">
-          <a href="https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar-1.0.5.dmg"
+          <a href="https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar.dmg"
             className="inline-flex items-center gap-2 px-7 py-3 text-base font-semibold text-white
               bg-gradient-to-r from-[#0085ff] to-[#00a0ff] hover:from-[#0070e0] hover:to-[#0085ff]
               rounded-xl shadow-[0_4px_24px_rgba(0,133,255,0.3)] dark:shadow-[0_4px_32px_rgba(0,133,255,0.4)]
