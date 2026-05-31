@@ -1,10 +1,12 @@
-[中文版本](README_zh.md)
-
 # Viabar
 
 **Via Nodes, View Bars** — A lightweight macOS productivity tool focused on multi-project progress overview and milestone management.
 
-[Website](https://viabar.tyrival.com) · [Download](https://github.com/tyrival/Viabar-Releases/releases)
+[Website](https://viabar.tyrival.com) · [Download](https://github.com/tyrival/Viabar-Releases/releases/latest/download/Viabar.dmg)
+
+###### 说明
+
+English ｜ [中文版本](README_zh.md)
 
 ## Overview
 
@@ -49,23 +51,6 @@ Multi-tier backup: hourly for 24h, daily for 7d, weekly for 6mo. Plain JSON form
 | Long access path to check progress | Extended Ecosystem — Menu Bar + Desktop Widget |
 | Reporting pressure | Automated Reports — one-click extraction and copy |
 | Scattered historical data | Local Scheduled Backups — multi-tier, plain JSON |
-
-## Tech Stack (Landing Page)
-
-- **Framework:** React 19 + TypeScript
-- **Build Tool:** Vite 6
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **Deployment:** GitHub Pages (builds to `docs/`)
-
-## Development
-
-```bash
-npm install
-npm run dev        # Start dev server
-npm run build      # TypeScript check + build
-npm run preview    # Preview production build
-```
 
 ## License
 
