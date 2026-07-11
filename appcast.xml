@@ -4,7 +4,7 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.1</title><sparkle:version>47</sparkle:version><sparkle:shortVersionString>1.1.1</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description>## What's New
+    <item><title>Version 1.1.2</title><sparkle:version>48</sparkle:version><sparkle:shortVersionString>1.1.2</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description>log</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.1.2/Viabar.dmg" sparkle:version="48" sparkle:shortVersionString="1.1.2" length="6058472" type="application/octet-stream" sparkle:edSignature="5xiXNYvgHyTRWS77SWIKVr7aj7B2a30JMtJk/d+l1Odc3f/VY7F1n/55GwXOvWNAhQK+nBMhWfEa3fxNWNOgDw==" /></item><item><title>Version 1.1.1</title><sparkle:version>47</sparkle:version><sparkle:shortVersionString>1.1.1</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description>## What's New
 - No notable changes.
 
 ## Improvements
