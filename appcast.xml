@@ -4,7 +4,14 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.4</title><sparkle:version>50</sparkle:version><sparkle:shortVersionString>1.1.4</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description>## What's New
+    <item><title>Version 1.1.5</title><sparkle:version>51</sparkle:version><sparkle:shortVersionString>1.1.5</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+- No notable changes.
+
+## Improvements
+- Release notes in the appcast are now tagged as Markdown for better rendering.
+
+## Fixes
+- No notable changes.</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.1.5/Viabar.dmg" sparkle:version="51" sparkle:shortVersionString="1.1.5" length="6422149" type="application/octet-stream" sparkle:edSignature="vXEyqVkg65mWf+fnqgWAQIv9ONKtoo79LAceoL51X/Z2wLk0SYkwdu8L9+OeeZg0xq4a0LohLoJ86lCUALEKAw==" /></item><item><title>Version 1.1.4</title><sparkle:version>50</sparkle:version><sparkle:shortVersionString>1.1.4</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description>## What's New
 - Added cross-platform Today's Recommendations
 
 ## Improvements
