@@ -4,7 +4,14 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.5</title><sparkle:version>51</sparkle:version><sparkle:shortVersionString>1.1.5</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+    <item><title>Version 1.1.6</title><sparkle:version>52</sparkle:version><sparkle:shortVersionString>1.1.6</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+- No notable changes.
+
+## Improvements
+- Updated app icons on macOS and iOS.
+
+## Fixes
+- No notable changes.</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.1.6/Viabar.dmg" sparkle:version="52" sparkle:shortVersionString="1.1.6" length="6108662" type="application/octet-stream" sparkle:edSignature="adyyUtqaFWbhvh+zZzer2KhLypbA22ILeOcb3Ar+L0kSrK8sAEejwVx6dUd3+4GNx4mD95T3IEC+o+xF9+ZoCg==" /></item><item><title>Version 1.1.5</title><sparkle:version>51</sparkle:version><sparkle:shortVersionString>1.1.5</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
 - No notable changes.
 
 ## Improvements
