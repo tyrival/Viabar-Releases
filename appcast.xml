@@ -4,7 +4,14 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.6</title><sparkle:version>52</sparkle:version><sparkle:shortVersionString>1.1.6</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+    <item><title>Version 1.1.7</title><sparkle:version>53</sparkle:version><sparkle:shortVersionString>1.1.7</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+- Added system notification scheduling.
+
+## Improvements
+- No notable changes.
+
+## Fixes
+- No notable changes.</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.1.7/Viabar.dmg" sparkle:version="53" sparkle:shortVersionString="1.1.7" length="6167210" type="application/octet-stream" sparkle:edSignature="L1JK6ABGUTYPHFRx6xf5D96R8DQgIE7KCmVzJyns+BxiKSqgdFPQn3QZ1VJB8rlHiI0spd9mjrZ0N6nq4CvVAg==" /></item><item><title>Version 1.1.6</title><sparkle:version>52</sparkle:version><sparkle:shortVersionString>1.1.6</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
 - No notable changes.
 
 ## Improvements
