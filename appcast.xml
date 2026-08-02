@@ -4,7 +4,14 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.8</title><sparkle:version>54</sparkle:version><sparkle:shortVersionString>1.1.8</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+    <item><title>Version 1.1.9</title><sparkle:version>55</sparkle:version><sparkle:shortVersionString>1.1.9</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+- Yearly report now includes an AI-generated summary.
+
+## Improvements
+- No notable changes.
+
+## Fixes
+- Fixed the new project button icon on iOS.</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.1.9/Viabar.dmg" sparkle:version="55" sparkle:shortVersionString="1.1.9" length="6383519" type="application/octet-stream" sparkle:edSignature="cTD0NOUi/x57v2aXml7FhH7VFyYqBcY14XD/jbxok8SbiAyytr3YM3wQht7JFVBvenCZ5DYeFEpusjcrmP0eBg==" /></item><item><title>Version 1.1.8</title><sparkle:version>54</sparkle:version><sparkle:shortVersionString>1.1.8</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
 - Added system notification scheduling.
 
 ## Improvements
