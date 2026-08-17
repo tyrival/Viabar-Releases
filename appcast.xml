@@ -4,7 +4,14 @@
     <title>Viabar</title>
     <description>Most recent updates to Viabar</description>
     <language>en</language>
-    <item><title>Version 1.1.9</title><sparkle:version>55</sparkle:version><sparkle:shortVersionString>1.1.9</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+    <item><title>Version 1.2.0</title><sparkle:version>56</sparkle:version><sparkle:shortVersionString>1.2.0</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
+- Add task number settings.
+
+## Improvements
+- No notable changes.
+
+## Fixes
+- No notable changes.</description><enclosure url="https://github.com/tyrival/Viabar-Releases/releases/download/v1.2.0/Viabar.dmg" sparkle:version="56" sparkle:shortVersionString="1.2.0" length="6399734" type="application/octet-stream" sparkle:edSignature="pW+PqYdAtScqLTh8dGOPQthwCIFlMgom5V3OFDHmhrWZYsPn3qlzvN53A7d7YF6ijoq+pII0PWd5gjWa4+aKCQ==" /></item><item><title>Version 1.1.9</title><sparkle:version>55</sparkle:version><sparkle:shortVersionString>1.1.9</sparkle:shortVersionString><sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion><description sparkle:format="markdown">## What's New
 - Yearly report now includes an AI-generated summary.
 
 ## Improvements
